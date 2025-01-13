@@ -1,8 +1,10 @@
+import Hero from "./Hero"
+
+
 const Home = () =>{
     return(
         <>
-        <h1>home Page</h1>
-        
+        <Hero />
         </>
     )
 }

@@ -1,6 +1,8 @@
+
 import { useEffect, useState } from "react";
 import Home from "./Home";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import './Login.css'
 
 const Login = () =>{
 
@@ -44,25 +46,23 @@ const Login = () =>{
             useEffect(()=>{
                 let getd = JSON.parse(localStorage.getItem("data"))
                 setData(getd)
-            })
+            },[])
         return(
             <>
-                <div className="main">
+                <div className="main2">
                     <h1>Login</h1>
     
-                    <form onSubmit={validform}>
-                        <label htmlFor="">Name</label>
-                        <input type="text" name="name" value={inputdata.name} placeholder="Enter your Name" onChange={hinput}  /> <br />
+                    <form className="formm" onSubmit={validform}>
+                        <input className="inp" type="text" name="name" value={inputdata.name} placeholder="Enter your Name" onChange={hinput}  /> <br />
     
-                        <label htmlFor="">Number</label>
-                        <input type="text" name="numb" value={inputdata.numb} placeholder="Enter your Number" onChange={hinput} /> <br />
+                        <input className="inp" type="text" name="numb" value={inputdata.numb} placeholder="Enter your Number" onChange={hinput} /> <br />
                         
-                        <label htmlFor="">Password</label>
-                        <input type="text" name="psw" value={inputdata.psw} placeholder="Enter Your Password" onChange={hinput} /> <br />
+                        <input className="inp" type="text" name="psw" value={inputdata.psw} placeholder="Enter Your Password" onChange={hinput} /> <br />
                         
                         
-                        <input type="submit"  />
+                        <input className="btn2" type="submit"  />
                     </form>
+                    <h2>New Here? GO there: <Link to={'/signup'}>Sign Up</Link></h2>
                 </div>
             </>
         )

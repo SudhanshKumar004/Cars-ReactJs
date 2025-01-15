@@ -49,6 +49,7 @@ const Login = () =>{
             },[])
         return(
             <>
+            <body className="loginbody">
                 <div className="main2">
                     <h1>Login</h1>
     
@@ -62,8 +63,9 @@ const Login = () =>{
                         
                         <input className="btn2" type="submit"  />
                     </form>
-                    <h2>New Here? GO there: <Link to={'/signup'}>Sign Up</Link></h2>
+                    <h2>New Here? Go there- <Link to={'/signup'}>Sign Up</Link></h2>
                 </div>
+            </body>
             </>
         )
 }

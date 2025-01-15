@@ -44,6 +44,7 @@ const Signup = () =>{
     
     return(
         <>
+        <body className="signupbody">
             <div className="main">
                 <h1>Sign Up</h1>
 
@@ -64,6 +65,7 @@ const Signup = () =>{
                 </form>
                 <h1>Already an Account? Login here- <Link to={'/login'}>Login</Link></h1>
             </div>
+        </body>
         </>
     )
 }

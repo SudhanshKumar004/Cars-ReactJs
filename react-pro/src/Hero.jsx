@@ -1,15 +1,19 @@
-
+import React from 'react'
+import './Hero.css'
+import videosource from './assets/bg2.webm'
 
 const Hero = () =>{
     return(
         <>
-         <div className="hero-container">
-      <div className="hero-content">
-        <h1>Drive Your Dream Car</h1>
-        <p>Experience the thrill of performance, style, and luxury.</p>
-        <button className="cta-btn">Browse Cars</button>
-      </div>
-    </div>
+        <div className="videocon">
+            <video autoPlay loop muted className='bgvideo'>
+                <source src={videosource} type='video/webm' />
+            </video>
+            <div className="content">
+                <h1>Cars Exotica</h1>
+                <p>We Sell Thrill</p>
+            </div>
+        </div>
         </>
     )
 }

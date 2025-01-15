@@ -5,6 +5,8 @@ import Home from './Home'
 import About from './About'
 import Login from './Login'
 import { Footer, Nav } from './Navbar'
+import Book from './Book'
+import Dashboard from './Dash'
 
 
 
@@ -22,6 +24,8 @@ function App() {
       <Route path='/about' element={<About />} />
       <Route path='/signup' element={<Signup />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/book' element={<Book />} />
+      <Route path='/dash' element={<Dashboard />} />
 
     </Routes>
     {!auth && <Footer />}

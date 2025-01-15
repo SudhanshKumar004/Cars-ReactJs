@@ -1,4 +1,4 @@
-/* body {
+.signupbody {
     background-image: url("https://motionarray.imgix.net/2673779-94pt66OpB8-high_0012.jpg?w=660&q=60&fit=max&auto=format");
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +10,7 @@
     font-family: 'Arial', sans-serif;
 }
 
-.main {
+.signupbody .main {
     border: 2px solid silver;
     padding: 30px;
     box-shadow: 0 0 5px black, 0 0 10px gold;
@@ -21,7 +21,7 @@
     box-sizing: border-box;
 }
 
-.main h1 {
+.signupbody .main h1 {
     font-size: 45px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bolder;
@@ -63,18 +63,19 @@
     transform: scale(1.05);
 }
 
-.main h1:last-of-type {
+.signupbody .main h1:last-of-type {
     font-size: 18px;
     text-align: center;
     margin-top: 20px;
 }
 
-.main h1 a {
-    color: blue;
+.signupbody .main h1 a {
+    color: green;
     text-decoration: none;
     font-weight: bold;
 }
 
-.main h1 a:hover {
-    text-decoration: underline;
-} */
+.signupbody .main h1 a:hover {
+    color: white;
+    text-shadow: 0 0 5px green, 0 0 5px green;
+}

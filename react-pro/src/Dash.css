@@ -12,23 +12,29 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url("https://wallpaperaccess.com/full/1662265.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
 }
 
 .dashcontainer {
-    width: 80%;
+    width: 85%;
     margin: 30px auto;
-    background-color: #fff;
+    background-color:snow;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow:  0 0 10px silver, 0 0 15px black;
 }
 
 .dashcontainer h2 {
     text-align: center;
     font-size: 4rem;
-    color: #007bff;
+    color: whitesmoke;
     margin-bottom: 20px;
-    text-shadow: 0 0 5px black, 0 0 10px whitesmoke;
+    text-shadow: 0 5px 10px #333, 5px 0 10px black;
 }
 
 .cartable {
@@ -41,7 +47,7 @@
 .cartable th, .cartable td {
     padding: 12px 20px;
     text-align: left;
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 .cartable th {
@@ -60,32 +66,42 @@
     cursor: pointer;
 }
 
-.cartable td:last-child {
-    border-right: none;
-}
-
 .cartable td {
     border-right: 1px solid #ddd;
+    font-size: 20px;
 }
 
 .cartable td .delbtn{
     color:white;
+    text-shadow: 0 5px 10px #333, 5px 0 10px black;
     background-color:chocolate;
     border-radius: 4px;
     border: 0;
     padding: 5px ;
 }
-.cartable td .delbtn:hover{
-    color:#007bff;
-    background-color:whitesmoke;
-    border-radius: 4px;
-    border: 0;
-    padding: 5px ;
+.cartable td .delbtn:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    background-color: rgb(216, 41, 41);
+    text-shadow: 0 0 5px whitesmoke, 0 0 10px black;
+    border-radius: 5px;
+    border:0;
+    transform: translateY(4px);
 }
 
 .nobookings{
     text-align: center;
     font-size: 30px;
+}
+
+.form-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.form-container.open {
+    max-height: 600px; /* Adjust based on the form's height */
 }
 
 /* Responsive */

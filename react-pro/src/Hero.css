@@ -1,42 +1,63 @@
-.videocon{
+.videocon {
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.videocon .bgvideo{
+.videocon .bgvideo {
     position: absolute;
     height: 100%;
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: -1;
     object-fit: cover;
 }
 
-.videocon .content{
+.videocon .content {
     position: relative;
     text-align: center;
     top: 25%;
-    position: relative;
     z-index: 1;
     padding: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgba(245, 245, 245, 0.331);
     border: 0;
 }
 
-.videocon .content h1{
-    color:black;
+.videocon .content h1 {
+    color: black;
     font-size: 120px;
     text-shadow: 0 0 10px goldenrod, 0 0 10px black;
-    font-weight:bolder;
+    font-weight: bolder;
 }
-.videocon .content p{
+
+.videocon .content p {
     font-size: 100px;
     color: black;
     text-shadow: 0 0 10px goldenrod, 0 0 10px black;
+}
 
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    .videocon .content h1 {
+        font-size: 80px;
+    }
+
+    .videocon .content p {
+        font-size: 60px;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 425px) {
+    .videocon .content h1 {
+        font-size: 50px;
+    }
+
+    .videocon .content p {
+        font-size: 40px;
+    }
 }

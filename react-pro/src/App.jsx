@@ -19,9 +19,9 @@ function App() {
     {!auth && <Nav />}
     <Routes>
 
-      <Route index element={<Home />} />
+      <Route index element={<Signup />} />
       <Route path='/home' element={<Home />} />
-      <Route path='/about' element={<About />} />
+      <Route path='/about' element ={<About />} />
       <Route path='/signup' element={<Signup />} />
       <Route path='/login' element={<Login />} />
       <Route path='/book' element={<Book />} />

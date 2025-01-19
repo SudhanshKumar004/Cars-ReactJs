@@ -38,7 +38,7 @@ const Book = () =>{
     })
     return(
         <>
-        <div className="form-container">
+        <div className="formcon">
       <h2>Order Form</h2>
       <form onSubmit={finalsubmit}>
           <label htmlFor="name">Name:</label>

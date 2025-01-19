@@ -1,64 +1,113 @@
-.plogo{
+.plogo {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 20px;
 }
-.cards1{
+
+.cards1 {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 50px;
     justify-content: center;
     align-items: center;
 }
-.cards1 .card1{
+
+.cards1 .card1 {
     border: 2px solid black;
     width: 340px;
     height: 480px;
     border-radius: 5px;
     padding: 10px;
-    display: block;
-    align-items: center;
-    margin-bottom: 50px ;
+    margin-bottom: 50px;
+    text-align: center;
 }
-.cards1 .card1 img{
-    width: 300px;
-    height: 200px;
+
+.cards1 .card1 img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
 }
-.cards1 .card1 img:hover{
+
+.cards1 .card1 img:hover {
     transition: all ease-in-out 0.2s;
     transform: scale(1.7);
 }
 
-.cards1 .card1 h1{
-    font-size: 30px;
+.cards1 .card1 h1 {
+    font-size: 24px;
 }
 
 .cards1 .card1 button {
     border: 0;
     background-color: darkslategray;
     color: whitesmoke;
-    font-size: 25px;
+    font-size: 20px;
     padding: 5px;
     border-radius: 5px;
-    margin-left: 95px
+    margin: 10px auto;
+    display: block;
 }
 
-.cards1 .card1 button:hover{
+.cards1 .card1 button:hover {
     color: black;
-    background-color:cadetblue;
+    background-color: cadetblue;
     transition: all ease-in-out 0.2s;
-    transform:scale(1.1,1.1);
+    transform: scale(1.1);
 }
 
-.flogo{
+.flogo, .llogo {
     width: 100%;
-    height: 450px;
+    height: auto;
     margin-top: 90px;
 }
 
-.llogo{
-    height: 450px;
-    width: 80%;
-    margin-top: 90px;
-    margin-left: 140px;
+/* Responsive adjustments for tablet devices */
+@media (max-width: 768px) {
+    .cards1 {
+        grid-template-columns: auto auto;
+        margin-left: 0;
+        gap: 15px;
+    }
+
+    .cards1 .card1 {
+        margin-bottom: 30px;
+    }
+
+    .cards1 .card1 h1 {
+        font-size: 22px;
+    }
+
+    .cards1 .card1 button {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .llogo {
+        margin-left: 0;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 426px) {
+    .cards1 {
+        grid-template-columns:auto;
+        gap: 20px;
+    }
+
+    .cards1 .card1 {
+        margin-bottom: 20px;
+    }
+
+    .cards1 .card1 h1 {
+        font-size: 20px;
+    }
+
+    .cards1 .card1 button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .llogo {
+        margin-left: 0;
+    }
 }

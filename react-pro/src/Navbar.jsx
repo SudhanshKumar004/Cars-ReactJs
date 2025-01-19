@@ -2,14 +2,24 @@ import { Link, Outlet } from 'react-router-dom'
 import './Nav.css'
 import logo from './assets/logo.jpg'
 import logo1 from './assets/logo1.png'
+import { useState } from 'react'
+
 
 const Nav = ()=>{
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
     return(
         <>
         <header>
           <nav className='nav'>
             <img src={logo1} />
-            <ul className="ul">
+              <div className="hamburger" onClick={toggleMenu}>
+          ☰
+        </div>
+            <ul className={`ul ${menuOpen ? 'active' : ''}`}>
 
           <li><Link to={"/home"}>Home</Link></li>
           <li><Link to={"/dash"}>Bookings</Link></li>

@@ -19,6 +19,7 @@
     max-width: 400px;
     border-radius: 10px;
     box-sizing: border-box;
+  
 }
 
 .signupbody .main h1 {
@@ -78,4 +79,58 @@
 .signupbody .main h1 a:hover {
     color: white;
     text-shadow: 0 0 5px green, 0 0 5px green;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signupbody .main {
+    padding: 10px;
+    width: 90%;
+    height: 90vh;
+  }
+
+  .signupbody .main h1 {
+    font-size: 26px;
+  }
+
+ .forms input[type="text"] {
+    width: 100%;
+    height:100%;
+    padding: 12px;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+  .forms .btn {
+    font-size: 15px;
+  }
+
+  .signupbody .main h1:last-of-type {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5px;
+}
+}
+
+@media (max-width: 425px) {
+  .signupbody .main {
+    padding: 15px;
+  }
+
+  .signupbody .main h1 {
+    font-size: 28px;
+  }
+
+  .forms input[type="text"] {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .forms .btn {
+    padding: 8px;
+    font-size: 14px;
+  }
 }

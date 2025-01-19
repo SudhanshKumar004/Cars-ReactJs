@@ -3,51 +3,59 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
-.nav{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-Gradient(45deg,red,black,red,black);
-}
-.nav h1{
-    color:snow;
-    font-size: 2em;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
- .nav img{
-    width: 180px;
-    height: 75px;
+.nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, red, black, red, black);
+  padding: 10px 20px;
+  position: relative;
 }
 
-.nav .ul{
-    display: flex;
-    gap: 20px;
-    text-decoration: none;
-    list-style: none;
-    cursor: pointer;
-    padding-right: 10px;
-}
-.nav .ul li{
-    font-size: 1.8em;
-    padding: 10px;
-    
+.nav h1 {
+  color: snow;
+  font-size: 2em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.nav .ul li a{
-    color: gainsboro;
-    text-decoration: none;
-    text-shadow: 0 0 5px black,0 0 10px red;
-    font-weight: bolder;
+.nav img {
+  width: 180px;
+  height: 75px;
+}
 
+.nav .ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.nav .ul li:hover{
-    color: goldenrod;
-    transition: all;
-    transition-duration: 0.2s;
-    transform:scale(1.1,1.1)
+
+.nav .ul li {
+  font-size: 1.8em;
+  padding: 10px;
 }
+
+.nav .ul li a {
+  color: gainsboro;
+  text-decoration: none;
+  text-shadow: 0 0 5px black, 0 0 10px red;
+  font-weight: bolder;
+}
+
+.nav .ul li:hover {
+  color: goldenrod;
+  transition: all 0.2s;
+  transform: scale(1.1, 1.1);
+}
+
+.hamburger {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
 
 .footer {
   background-color: #333;
@@ -110,4 +118,44 @@
 .footer-bottom {
   margin-top: 20px;
   font-size: 22px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav .ul {
+    display: none;
+    flex-direction: column;
+    background-color: darkslategray;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+  }
+
+  .nav .ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+
+  .nav .ul li {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav .ul li a {
+    display: block;
+    padding: 10px;
+  }
+
+  
 }

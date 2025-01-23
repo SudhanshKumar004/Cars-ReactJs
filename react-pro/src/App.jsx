@@ -2,7 +2,6 @@ import './App.css'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Signup from './Signup'
 import Home from './Home'
-import About from './About'
 import Login from './Login'
 import { Footer, Nav } from './Navbar'
 import Book from './Book'
@@ -21,7 +20,6 @@ function App() {
 
       <Route index element={<Signup />} />
       <Route path='/home' element={<Home />} />
-      <Route path='/about' element ={<About />} />
       <Route path='/signup' element={<Signup />} />
       <Route path='/login' element={<Login />} />
       <Route path='/book' element={<Book />} />

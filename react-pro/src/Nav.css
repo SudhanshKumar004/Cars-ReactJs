@@ -11,6 +11,7 @@
   background: linear-gradient(45deg, red, black, red, black);
   padding: 10px 20px;
   position: relative;
+  z-index: 5;
 }
 
 .nav h1 {
@@ -54,6 +55,8 @@
   display: none;
   font-size: 2em;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 
@@ -145,6 +148,7 @@
   .hamburger {
     display: block;
     color: white;
+    z-index: 2;
   }
 
   .nav .ul li {

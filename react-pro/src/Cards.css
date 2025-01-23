@@ -61,7 +61,7 @@
     margin-top: 90px;
 }
 
-/* Responsive adjustments for tablet devices */
+/* Responsive */
 @media (max-width: 768px) {
     .cards1 {
         grid-template-columns: auto auto;
@@ -87,7 +87,6 @@
     }
 }
 
-/* Responsive adjustments for mobile devices */
 @media (max-width: 426px) {
     .cards1 {
         grid-template-columns:auto;

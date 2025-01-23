@@ -40,7 +40,7 @@
     text-shadow: 0 0 10px goldenrod, 0 0 10px black;
 }
 
-/* Responsive adjustments for tablets */
+/* Responsive */
 @media (max-width: 768px) {
     .videocon .content h1 {
         font-size: 80px;
@@ -51,7 +51,6 @@
     }
 }
 
-/* Responsive adjustments for mobile devices */
 @media (max-width: 425px) {
     .videocon .content h1 {
         font-size: 50px;

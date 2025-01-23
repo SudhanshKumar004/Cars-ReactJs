@@ -38,55 +38,59 @@ const Dashboard = () => {
   return (
     <>
       <div className="body4">
-        <div className="dashcontainer">
-          <h2>Car Bookings</h2>
-          {cars.length > 0 ? (
-            <table className="cartable">
-              <thead>
-                <tr>
-                  <th>Customer Name</th>
-                  <th>Delivery Date</th>
-                  <th>Address</th>
-                  <th>Advance Pay</th>
-                  <th>Model</th>
-                  <th>Phone Number</th>
-                  <th>Cancel Booking</th>
-                  <th>Update Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cars.map((c, index) => (
-                  <tr key={index}>
-                    <td>{c.name}</td>
-                    <td>{c.deliveryDate}</td>
-                    <td>{c.address}</td>
-                    <td>{c.advance} Rs</td>
-                    <td>{c.model}</td>
-                    <td>{c.number}</td>
-                    <td>
-                      <button className="delbtn" onClick={() => delcar(c.id)}>
-                        Cancel
-                      </button>
-                    </td>
-                    <td>
-                      <button
-                        className="delbtn"
-                        onClick={() => {
-                          setFormv(true), setEditdata(c);
-                        }}
-                      >
-                        Update
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ) : (
-            <p className="nobookings">No bookings available.</p>
-          )}
-        </div>
+  <div className="dashcontainer">
+    <h2>Car Bookings</h2>
+    {cars.length > 0 ? (
+      <div className="table-wrapper">
+        <table className="cartable">
+          <thead>
+            <tr>
+              <th>Customer Name</th>
+              <th>Delivery Date</th>
+              <th>Address</th>
+              <th>Advance Pay</th>
+              <th>Model</th>
+              <th>Phone Number</th>
+              <th>Cancel Booking</th>
+              <th>Update Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cars.map((c, index) => (
+              <tr key={index}>
+                <td>{c.name}</td>
+                <td>{c.deliveryDate}</td>
+                <td>{c.address}</td>
+                <td>{c.advance} Rs</td>
+                <td>{c.model}</td>
+                <td>{c.number}</td>
+                <td>
+                  <button className="delbtn" onClick={() => delcar(c.id)}>
+                    Cancel
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className="delbtn"
+                    onClick={() => {
+                      setFormv(true);
+                      setEditdata(c);
+                    }}
+                  >
+                    Update
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+    ) : (
+      <p className="nobookings">No bookings available.</p>
+    )}
+  </div>
+</div>
+
       {formv && (
         <div className={`formcontainer ${formv ? "open" : ""}`}>
           <form onSubmit={putdata}>

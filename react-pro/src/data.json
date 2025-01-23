@@ -17,6 +17,15 @@
       "advance": "10,00,000",
       "model": "Porsche 911 Turbo S",
       "number": "6266680206"
+    },
+    {
+      "id": "6f79",
+      "name": "Harshit Rawat",
+      "deliveryDate": "2025-11-01",
+      "address": "bhopal",
+      "advance": "1,00,00,000 Rs",
+      "model": "Porsche 911 Turbo S",
+      "number": "5555"
     }
   ]
 }
